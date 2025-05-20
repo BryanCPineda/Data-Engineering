@@ -22,9 +22,9 @@ Dependencias:
     - colorama para el formato de texto en terminal
 """
 import os
-from manager import UserManager
-from user import User
-from utils import validate_email, validate_password
+from app.manager import UserManager
+from app.user import User
+from app.utils import validate_email, validate_password
 from colorama import Fore, Back, init
 
 init(autoreset=True)  # Inicializa colorama para que los colores se reinicien automáticamente

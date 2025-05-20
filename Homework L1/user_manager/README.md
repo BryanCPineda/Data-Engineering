@@ -67,7 +67,7 @@ DATA = data/users.json
 Para ejecutar la aplicación, desde la terminal activa (y en el entorno virtual si usas):
 
 ```
-python app/main.py
+python -m app.main
 ```
 
 Verás un menú interactivo con opciones para:
@@ -96,6 +96,14 @@ Estructura del proyecto
 ├── users.json # Archivo donde se guardan los usuarios
 ├── requirements.txt # Dependencias del proyecto
 └── README.md # Documentación del proyecto
+```
+
+## Testing automatizado de la aplicación de gestión de usuarios
+
+Esta aplicacion cuenta con testing automatizado, para ejecutarlo se debe correr el siguiente comando:
+
+```
+python -m unittest discover -s tests
 ```
 
 ## Autor

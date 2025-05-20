@@ -1,14 +1,20 @@
 [
     {
-        "id": "0d86271e-e17e-4f0a-8e41-32d9c2d97b90",
+        "id": "421cd2e0-791b-4fcd-a49c-e3aa25c69b5b",
         "name": "camilo",
         "email": "Camilo@mail.com",
         "password": "Camilo12345"
     },
     {
-        "id": "efea02ca-192b-425c-b05b-aaa51324e90c",
+        "id": "2e6e73a4-e308-4a73-8e17-62bfb22195e3",
         "name": "camilo",
         "email": "camilo@mail.com",
         "password": "Camilo12345"
+    },
+    {
+        "id": "dfc802aa-a950-4ccc-b19f-0a268aafa731",
+        "name": "bryan",
+        "email": "bryan@mail.com",
+        "password": "bryan1233545A"
     }
 ]

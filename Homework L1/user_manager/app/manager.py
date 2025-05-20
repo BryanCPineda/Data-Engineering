@@ -24,7 +24,7 @@ Métodos:
 
 import json 
 from decouple import config 
-from user import User 
+from app.user import User 
 import os 
 class UserManager:
     def __init__(self):
