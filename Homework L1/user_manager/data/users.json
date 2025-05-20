@@ -1,17 +1,14 @@
 [
     {
+        "id": "0d86271e-e17e-4f0a-8e41-32d9c2d97b90",
+        "name": "camilo",
+        "email": "Camilo@mail.com",
+        "password": "Camilo12345"
+    },
+    {
+        "id": "efea02ca-192b-425c-b05b-aaa51324e90c",
         "name": "camilo",
         "email": "camilo@mail.com",
-        "password": "Camilo12356"
-    },
-    {
-        "name": "camilo2",
-        "email": "cmailo2@mail.com",
-        "password": "Camilo1212123"
-    },
-    {
-        "name": "camilo",
-        "email": "camilo2@mail.com",
-        "password": "Contrase\u00f1a12345"
+        "password": "Camilo12345"
     }
 ]

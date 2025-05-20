@@ -24,5 +24,5 @@ def validate_password(password: str) -> bool:
         not re.search(r'[A-Z]', password) or
         not re.search(r'[a-z]', password) or
         not re.search(r'[0-9]', password)):
-        raise ValueError("La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número")
+        raise ValueError("Contraseña erronea: la contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula y un número")
     return True

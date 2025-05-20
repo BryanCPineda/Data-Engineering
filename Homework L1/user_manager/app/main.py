@@ -21,6 +21,7 @@ Dependencias:
     - validate_email, validate_password del módulo utils
     - colorama para el formato de texto en terminal
 """
+import os
 from manager import UserManager
 from user import User
 from utils import validate_email, validate_password
@@ -44,6 +45,10 @@ def menu():
 '''
 main(): Ejecuta el bucle principal de la aplicación manejando las interacciones del usuario
 '''
+
+def clear_console():
+    os.system('cls' if os.name == 'nt' else 'clear') 
+
 def main():
     manager = UserManager()
     manager.load_users()  
@@ -52,10 +57,11 @@ def main():
         print(Fore.CYAN + "\nSeleccione una de las siguientes opciones:")
         menu()
         choice = input(Fore.GREEN + "Opción: ")
-
+        clear_console()
         if choice == '1':
-            name = input(Fore.MAGENTA + "Ingrese el nombre del usuario: ")
-            email = input(Fore.MAGENTA + "Ingrese el correo electrónico: ")
+            name = input(Fore.MAGENTA + "Ingrese el nombre del usuario: ").lower()
+            email = input(Fore.MAGENTA + "Ingrese el correo electrónico: ").lower()
+            print(Fore.CYAN + "La contraseña debe tener al menos 8 caracteres" + "\nLa contraseña debe contener al menos una letra mayúscula" + "\nLa contraseña debe contener al menos una letra minúscula" + "\nLa contraseña debe contener al menos un número")
             password = input(Fore.MAGENTA + "Ingrese la contraseña: ")
 
             try:
@@ -73,7 +79,7 @@ def main():
             else:
                 print(Fore.MAGENTA + "Usuarios registrados:")
                 for user in users:
-                    print(Fore.CYAN + f"Nombre: {user.name}, Correo: {user.email}")
+                    print(Fore.CYAN + f"Nombre: {Fore.GREEN + user.name}" + Fore.CYAN + f", Correo: { Fore.GREEN + user.email}")
             
         elif choice == '3':
             name = input(Fore.MAGENTA + "Ingrese el nombre del usuario a buscar: ")
@@ -83,7 +89,7 @@ def main():
             else:
                 print(Fore.GREEN + "Usuarios encontrados:")
                 for user in users:
-                    print(Fore.CYAN + f"Nombre: {user.name}, Correo: {user.email}")
+                    print(Fore.CYAN + f"Nombre: {Fore.GREEN + user.name}" + Fore.CYAN + f", Correo: { Fore.GREEN + user.email}")
         
         elif choice == '4':
             email = input(Fore.MAGENTA + "Ingrese el correo electrónico del usuario a eliminar: ")

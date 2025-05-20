@@ -57,6 +57,13 @@ pip install -r requirements.txt
 ```
 
 Uso
+
+Antes de ejecutar la aplicación, es recomendable configurar las variables de entorno. Debes crear un archivo `.env` en la raíz del proyecto y definir las variables necesarias.
+
+```
+DATA = data/users.json
+```
+
 Para ejecutar la aplicación, desde la terminal activa (y en el entorno virtual si usas):
 
 ```

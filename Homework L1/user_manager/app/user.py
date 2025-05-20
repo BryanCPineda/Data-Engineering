@@ -13,14 +13,18 @@ Métodos:
     to_dict(): Convierte el objeto User a un diccionario.
     from_dict(data): Crea un objeto User a partir de un diccionario.
 """
+import uuid
+
 class User:
-  def __init__(self, name: str, email: str, password: str):
+  def __init__(self, name: str, email: str, password: str, id=None):
+    self.id = str(uuid.uuid4())
     self.name = name
     self.email = email
     self.password = password
 
   def to_dict(self):
     return {
+      'id': self.id,
       'name': self.name,
       'email': self.email,
       'password': self.password
@@ -28,8 +32,11 @@ class User:
   
   @staticmethod
   def from_dict(data: dict):
-    return User(data['name'], data['email'], data['password'])
-
-
+      return User(
+          id=data['id'],
+          name=data['name'],
+          email=data['email'],
+          password=data['password']
+      )
 
 
